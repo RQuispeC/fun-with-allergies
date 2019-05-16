@@ -11,7 +11,6 @@ import matplotlib.pyplot as plt
 import os.path as osp
 import gc
 
-
 def get_model(x, y):
 	regr = SVR()
 	pipe = Pipeline(steps=[('reg', regr)])
@@ -33,13 +32,13 @@ def read(file_name):
 	return x, y
 
 if __name__ == '__main__':
-	root = '../data/machine_learning'
+	data_root = '../data/machine_learning'
 	file_names = ['black_african_american.tsv', 'female.tsv', 'hispanic_latino.tsv', 'male.tsv', 'under_18_years.tsv', 'white.tsv']
 	names = ['black african american', 'female ', 'hispanic latino', 'male', 'under 18 years', 'white']
 
 	query = np.array([[2018], [2019], [2020]]).reshape(-1, )
 	for fn, n in zip(file_names, names):
-		x, y = read(osp.join(root, fn))
+		x, y = read(osp.join(data_root, fn))
 		
 		#predict(x, y, np.array([[2018], [2020]]))
 		model = get_model(x, y)
