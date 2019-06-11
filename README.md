@@ -10,3 +10,11 @@ ALl tested on Python3:
 ```
 pip3 install SPARQLWrapper nltk
 ```
+
+## Machine Learning
+
+Run notebook `machine_learning/regression-allergy-percentage.ipynb`
+
+## Statistics
+
+Run notebook `statistics/allergy-age_correlation.ipynb`
